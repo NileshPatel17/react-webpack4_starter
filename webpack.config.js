@@ -5,7 +5,7 @@ module.exports = {
   entry: './src/index.js',
   output: {
     path: path.join(__dirname, '/dist'),
-    filename: 'index_bundle.js'
+    filename: 'main.js'
   },
   module: {
     rules: [
@@ -15,7 +15,8 @@ module.exports = {
         use: {
           loader: 'babel-loader'
         }
-      }
+      },
+      { test: /\.css$/, use: 'css-loader' }
     ]
   },
   plugins: [
