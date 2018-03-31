@@ -1,25 +1,34 @@
-# React Webpack Starter
+# React Webpack4 Starter
+
 > This is a boilerplate for React 16 & Webpack 4. It includes webpack-dev-server and a build script
 
 ## Quick Start
 
-``` bash
+```bash
 # Install dependencies
-npm install
+yarn
 
 # Serve on localhost:3000
-npm start
+yarn start
+
+# Build for development
+yarn build:dev
 
 # Build for production
-npm run build
+yarn build
+
+# output JSON to html
+yarn analyze:html <filename>
+
+# output JSON to file
+npm run analyze:json main.json <filename>
 ```
 
 ## App Info
 
 ### Author
 
-Brad Traversy
-[Traversy Media](http://www.traversymedia.com)
+Nilesh Patel
 
 ### Version
 
