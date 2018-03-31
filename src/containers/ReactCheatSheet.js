@@ -16,7 +16,8 @@ export default class ReactCheatSheet extends Component {
     const _categories = data.reduce((acc, { category }) => (acc.indexOf(category) === -1 ? acc.concat(category) : acc), []);
     return children({
       selectedCategories: categories,
-      filteredResults: filterByPredicate(filterByCategory(data, categories), predicate),
+      // filteredResults: filterByPredicate(filterByCategory(data, categories), predicate),
+      filteredResults: filterByCategory(data, categories),
       categories: _categories,
       handleCategoryChange: (category, checked) =>
         this.setState({

@@ -12,9 +12,22 @@ class App extends Component {
   render() {
     console.log('data', data);
     return (
-      <main>
-        <div>
-          <h1>
+      <main
+        className={cxs({
+          fontFamily: '-apple-system,BlinkMacSystemFont,sans-serif',
+          margin: '0 auto',
+          maxWidth: '720px'
+        })}
+      >
+        <div className={cxs({ padding: '1rem' })}>
+          <h1
+            className={cxs({
+              marginBottom: '1rem',
+              color: '#212529',
+              fontWeight: 900,
+              fontSize: '2em'
+            })}
+          >
             React Cheat Sheet{' '}
             <small
               className={cxs({
@@ -43,7 +56,12 @@ class App extends Component {
               </div>
             )}
           </ReactCheatSheet>
-          <footer>
+          <footer
+            className={cxs({
+              paddingBottom: '1rem',
+              margin: '1rem 0'
+            })}
+          >
             <a
               href="https://learnreact.com/courses/function-components?utm_source=reactcheatsheet&utm_medium=ad&utm_campaign=standalone_resources&utm_content=function-components"
               target="_blank"
