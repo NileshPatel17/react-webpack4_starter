@@ -5,6 +5,7 @@ import CategoryFilter from './components/CategoryFilter';
 import ReferenceItem from './components/ReferenceItem';
 import NoResults from './components/NoResults';
 import cxs from 'cxs';
+import { includes } from 'lodash';
 
 import data from './data.js';
 
@@ -46,10 +47,12 @@ class App extends Component {
                   <CategoryFilter
                     key={i}
                     name={name}
-                    active={selectedCategories.filter(category => category === name).length > 0}
+                    active={includes(selectedCategories, name)}
                     onToggle={(category, checked) => handleCategoryChange(category, checked)}
                   />
                 ))}
+                <br />
+                <span className={cxs({ fontSize: '1em' })}>{`${filteredResults.length} match found`}</span>
                 <section>
                   {filteredResults.length ? filteredResults.map((item, i) => <ReferenceItem key={i} {...item} />) : <NoResults />}
                 </section>

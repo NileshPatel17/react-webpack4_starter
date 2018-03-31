@@ -13,12 +13,11 @@ export default class ReactCheatSheet extends Component {
   render() {
     const { data, children } = this.props;
     const { predicate, categories } = this.state;
-    const _categories = data.reduce((acc, { category }) => (acc.indexOf(category) === -1 ? acc.concat(category) : acc), []);
+    const allCategories = data.reduce((acc, { category }) => (acc.indexOf(category) === -1 ? acc.concat(category) : acc), []);
     return children({
+      categories: allCategories,
       selectedCategories: categories,
-      // filteredResults: filterByPredicate(filterByCategory(data, categories), predicate),
-      filteredResults: filterByCategory(data, categories),
-      categories: _categories,
+      filteredResults: filterByPredicate(filterByCategory(data, categories), predicate),
       handleCategoryChange: (category, checked) =>
         this.setState({
           categories: checked ? categories.concat(category) : categories.filter(item => item != category)
