@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<SearchInput /> SearchInput component should render as expected 1`] = `
+<label>
+  <span
+    className="x0 x1"
+  >
+    Filter Search:
+  </span>
+  <input
+    autoFocus={true}
+    className="x2 x3 x4 x5 x6 x7 x8 x9"
+    onChange={[Function]}
+    placeholder="Filter by name"
+    type="text"
+    value="refs"
+  />
+</label>
+`;

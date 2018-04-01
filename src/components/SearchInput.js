@@ -10,7 +10,7 @@ const SearchInput = ({ searchPredicate, handleSearchChange }) => (
         clip: 'rect(1px, 1px, 1px, 1px)'
       })}
     >
-      Filter Search
+      Filter Search:
     </span>
     <input
       placeholder="Filter by name"
