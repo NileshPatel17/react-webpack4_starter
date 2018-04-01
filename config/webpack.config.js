@@ -3,6 +3,8 @@ const publicPath = paths.servedPath;
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 
+var packageJson = require(paths.appPackageJson);
+
 module.exports = {
   name: 'client',
   target: 'web',
@@ -10,7 +12,7 @@ module.exports = {
   output: {
     path: paths.appBuild,
     publicPath: publicPath,
-    filename: 'static/js/main.js'
+    filename: `static/js/main-[hash]-v${packageJson.version}.js`
   },
   devtool: 'source-map',
   module: {
@@ -29,8 +31,8 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: './src/index.html',
       filename: 'index.html'
-    }),
+    })
     // Clean webpack
-    new CleanWebpackPlugin(['dist'])
+    // new CleanWebpackPlugin([paths.appBuild])
   ]
 };

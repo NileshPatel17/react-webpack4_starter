@@ -4,3 +4,4 @@ package-lock.json
 yarn-error.log
 bundle_info
 stats*.json
+config/test.js

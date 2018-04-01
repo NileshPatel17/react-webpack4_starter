@@ -5,8 +5,11 @@
   "main": "index.js",
   "scripts": {
     "start": "webpack-dev-server --config config/webpack.config --mode development --open --hot",
-    "build-dev": "webpack --config config/webpack.config --mode development --progress --json > stats.json",
+    "build:dev": "webpack --config config/webpack.config --mode development --progress --json > stats.json",
     "build": "webpack --config config/webpack.config --mode production --progress --json > stats.json",
+    "prebuild": "yarn clean",
+    "prebuild:dev": "yarn clean",
+    "clean": "rimraf dist",
     "test": "jest",
     "test:watch": "jest --watch",
     "test:coverage": "jest --coverage",
@@ -18,15 +21,9 @@
     "stats": "webpack --profile --json > compilation-stats.json"
   },
   "jest": {
-    "setupFiles": [
-      "./src/jestsetup.js"
-    ],
-    "snapshotSerializers": [
-      "enzyme-to-json/serializer"
-    ],
-    "transformIgnorePatterns": [
-      "/node_modules/(?!test-component).+\\.js$"
-    ]
+    "setupFiles": ["./src/jestsetup.js"],
+    "snapshotSerializers": ["enzyme-to-json/serializer"],
+    "transformIgnorePatterns": ["/node_modules/(?!test-component).+\\.js$"]
   },
   "author": "Brad Traversy",
   "license": "MIT",
