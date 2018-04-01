@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
-import ReactCheatSheet from './containers/ReactCheatSheet';
-import SearchInput from './components/SearchInput';
-import CategoryFilter from './components/CategoryFilter';
-import ReferenceItem from './components/ReferenceItem';
-import NoResults from './components/NoResults';
+import ReactCheatSheet from './containers/ReactCheatSheet/ReactCheatSheet.jsx';
+import SearchInput from './components/SearchInput/SearchInput.jsx';
+import CategoryFilter from './components/CategoryFilter/CategoryFilter.jsx';
+import ReferenceItem from './components/ReferenceItem/ReferenceItem.jsx';
+import NoResults from './components/NoResults/NoResults.jsx';
 import cxs from 'cxs';
 import { includes } from 'lodash';
 

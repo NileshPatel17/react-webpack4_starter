@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import { filterByCategory, filterByPredicate } from '../helpers/filterBy';
+import { filterByCategory, filterByPredicate } from '../../helpers/filterBy';
 
 export default class ReactCheatSheet extends Component {
   constructor() {

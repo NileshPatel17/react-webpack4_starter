@@ -1,18 +1,22 @@
-const path = require('path');
+const paths = require('./paths');
+const publicPath = paths.servedPath;
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 
 module.exports = {
-  entry: './src/index.js',
+  name: 'client',
+  target: 'web',
+  entry: './src/index.jsx',
   output: {
-    path: path.join(__dirname, '/dist'),
-    filename: 'main.js'
+    path: paths.appBuild,
+    publicPath: publicPath,
+    filename: 'static/js/main.js'
   },
   devtool: 'source-map',
   module: {
     rules: [
       {
-        test: /\.js$/,
+        test: /\.(js|jsx)$/,
         exclude: /node_modules/,
         use: {
           loader: 'babel-loader'
@@ -24,7 +28,7 @@ module.exports = {
   plugins: [
     new HtmlWebpackPlugin({
       template: './src/index.html',
-      filename: './index.html'
+      filename: 'index.html'
     }),
     // Clean webpack
     new CleanWebpackPlugin(['dist'])
