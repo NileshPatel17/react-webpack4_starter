@@ -1,17 +1,16 @@
 import React, { Component } from 'react';
-import ReactCheatSheet from './containers/ReactCheatSheet/ReactCheatSheet.jsx';
-import SearchInput from './components/SearchInput/SearchInput.jsx';
-import CategoryFilter from './components/CategoryFilter/CategoryFilter.jsx';
-import ReferenceItem from './components/ReferenceItem/ReferenceItem.jsx';
-import NoResults from './components/NoResults/NoResults.jsx';
+import ReactCheatSheet from '../ReactCheatSheet/ReactCheatSheet.jsx';
+import SearchInput from '../../components/SearchInput/SearchInput.jsx';
+import CategoryFilter from '../../components/CategoryFilter/CategoryFilter.jsx';
+import ReferenceItem from '../../components/ReferenceItem/ReferenceItem.jsx';
+import NoResults from '../../components/NoResults/NoResults.jsx';
 import cxs from 'cxs';
 import { includes } from 'lodash';
 
-import data from './data.js';
+import data from '../../data/data.js';
 
 class App extends Component {
   render() {
-    console.log('data', data);
     return (
       <main
         className={cxs({

@@ -1,5 +1,5 @@
 import React from 'react';
-import extendWithDefaults from '../assignSharedDefaults';
+import extendWithDefaults from '../helpers/assignSharedDefaults';
 
 const lifecycleMethods = [
   {

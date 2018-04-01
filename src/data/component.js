@@ -1,4 +1,4 @@
-import extendWithDefaults from '../assignSharedDefaults';
+import extendWithDefaults from '../helpers/assignSharedDefaults';
 
 const data = [
   {

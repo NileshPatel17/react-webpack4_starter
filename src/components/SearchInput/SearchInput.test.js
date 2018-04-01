@@ -3,7 +3,7 @@ import { shallow } from 'enzyme';
 import toJson from 'enzyme-to-json';
 import { assertPropTypes } from 'check-prop-types';
 import PropTypes from 'prop-types';
-import SearchInput from '../components/SearchInput';
+import SearchInput from './SearchInput.jsx';
 
 describe('<SearchInput />', () => {
   const inputText = 'refs';
