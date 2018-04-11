@@ -74,6 +74,13 @@ global.mount = mount;
 "test:coverage": "jest --coverage",
 ```
 
+### Focusing and Excluding Tests
+
+```
+You can replace it() with xit() to temporarily exclude a test from being executed.
+Similarly, fit() lets you focus on a specific test without running any other tests.
+```
+
 ---
 
 ## App Info

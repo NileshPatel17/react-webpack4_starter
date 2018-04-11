@@ -21,9 +21,11 @@
     "stats": "webpack --profile --json > compilation-stats.json"
   },
   "jest": {
-    "setupFiles": ["./src/jestsetup.js"],
+    "setupFiles": ["<rootDir>/jestsetup.js"],
+    "collectCoverageFrom": ["src/**/*.{js,jsx}"],
     "snapshotSerializers": ["enzyme-to-json/serializer"],
-    "transformIgnorePatterns": ["/node_modules/(?!test-component).+\\.js$"]
+    "testMatch": ["<rootDir>/src/**/?(*.)(spec|test).js?(x)"],
+    "transformIgnorePatterns": ["[/\\\\]node_modules[/\\\\].+\\.(js|jsx)$"]
   },
   "author": "Brad Traversy",
   "license": "MIT",
